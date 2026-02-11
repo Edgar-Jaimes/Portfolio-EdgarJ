@@ -1,0 +1,174 @@
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{ margin: 0; font-family: Arial, Helvetica, sans-serif; background: white; }
+
+#menuItems{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: Black;
+  padding: 0;
+}
+
+#menuItems button{
+  width: 100%;
+  height: 55px;
+  background: blue;
+  color: White;
+  font-size: 22px;
+  border: 1px solid Black;
+  cursor: pointer;
+  display: block;
+}
+
+#menuItems button:hover{
+  background: blue;
+}
+
+#recentArticles:hover{
+  background: #c89a2a;
+  color: #fff;
+}
+
+#jumpMenu{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: #c89a2a;
+  display: none;
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+  display: block;
+}
+
+#jumpMenu li{ margin: 0; padding: 0; }
+
+#jumpMenu a{
+  display: block;
+  padding: 3px 18px;
+  font-size: 20px;
+  color: Blue;
+  text-decoration: underline;
+}
+
+#jumpMenu a:hover{
+  background: Blue;
+  color: White;
+  text-decoration: none;
+}
+
+main{
+  margin-left: 240px;
+  padding-top: 140px;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 240px;
+  width: calc(100% - 240px);
+  height: 120px;
+  background: red;
+  border-bottom: 2px solid black;
+  z-index: 5;
+}
+
+header p{
+  margin: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1{
+  text-align: center;
+  margin: 18px 0 35px 0;
+  font-size: 44px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 55px 70px;
+  padding: 0 40px 120px 40px;
+}
+
+#container article{
+  width: 300px;
+  color: #bdbdbd;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 2s, color 2s;
+}
+
+#container article h2{
+  margin: 0 0 12px 0;
+  font-size: 26px;
+  color: inherit;
+  transition: color 2s;
+}
+
+#container article p{
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  color: inherit;
+  transition: color 2s;
+}
+
+#container article:hover{
+  color: black;
+  transform: scale(1.18);
+  z-index: 2;
+}
+
+#container article > p:first-of-type::first-letter{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+
+#container article a{
+  color: blue;
+  text-decoration: underline;
+}
+
+#container article a[href*="google"]::after{
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  vertical-align: middle;
+  background: url("arrowarrow.png") no-repeat center;
+  background-size: contain;
+}
+
+#thanks{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 22px 28px;
+  background: lightskyblue;
+  border: 2px solid black;
+  z-index: 10;
+  font-size: 42px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#thanks a{
+  color: blue;
+  text-decoration: underline;
+}
+
+footer{
+  padding: 30px 40px 60px 40px;
+}
