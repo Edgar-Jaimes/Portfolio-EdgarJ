@@ -1,4 +1,4 @@
-// Basic JavaScript Exercises
+
 
 function getCounterValue() {
     const el = document.getElementById("counter");
